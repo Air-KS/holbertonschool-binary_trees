@@ -10,7 +10,9 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	size_t leftCount = 0, rightCount = 0;
 
 	if (tree == NULL) /* Vérifie si l'arbre est vide (NULL) */
-		return;
+	{
+		return (NULL);
+	}
 
 	if (tree->left != NULL) /* Vérifie s'il y a un nœud gauche */
 		leftCount = 1 + binary_tree_height(tree->left);
