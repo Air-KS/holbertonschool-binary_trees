@@ -8,22 +8,22 @@
  */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 {
-        binary_tree_t *node;
+	binary_tree_t *node;
 
-        if (!parent)
-                return (NULL);
+	if (!parent)
+		return (NULL);
 
-        /* Création du nouveau nœud */
-        node = binary_tree_node(parent, value);
+	/* Création du nouveau nœud */
+	node = binary_tree_node(parent, value);
 
-        if (parent->right)
-        {
-                /* Déplacement de l'enfant existant */
-                node->right = parent->right;
-                node->right->parent = node;
-        }
-        parent->right = node;
+	if (parent->right)
+	{
+		/* Déplacement de l'enfant existant */
+		node->right = parent->right;
+		node->right->parent = node;
+	}
+	parent->right = node;
 
-        return (node);
+	return (node);
 }
 
